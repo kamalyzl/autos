@@ -81,13 +81,23 @@ $(document).ready(function() {
   );
 }); //fin
 
-console.log("dasda");
 // rrss
-$(".imgsocial").hover(
-  function() {
-    console.log("click");
-  },
-  function() {
-    console.log("asd");
+$(".imgsocial").click(function() {
+  const valuealt = $(this).attr("alt");
+  console.log(valuealt);
+  switch (valuealt) {
+    case "facebook":
+      $(this).attr("href", "https://www.facebook.com");
+      window.location.href = $(this).attr("href");
+      break;
+    case "twitter":
+      $(this).attr("href", "https://www.twitter.com");
+      window.location.href = $(this).attr("href");
+      break;
+
+    default:
+      $(this).attr("href", "https://www.instagram.com");
+      window.location.href = $(this).attr("href");
+      break;
   }
-);
+});
