@@ -80,3 +80,14 @@ $(document).ready(function() {
     }
   );
 }); //fin
+
+console.log("dasda");
+// rrss
+$(".imgsocial").hover(
+  function() {
+    console.log("click");
+  },
+  function() {
+    console.log("asd");
+  }
+);
